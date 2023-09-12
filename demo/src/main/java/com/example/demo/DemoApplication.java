@@ -38,12 +38,9 @@ public class DemoApplication {
 
 			//Cliente
 			Cliente cliente1 = new Cliente();
-
 			cliente1.setNombre("Leo");
 			cliente1.setApellido("Gonzalez");
 			cliente1.setTelefono("+542615278353");
-
-
 
 			//Domicilio
 			Domicilio domicilio1 = new Domicilio();
@@ -54,7 +51,6 @@ public class DemoApplication {
 			cliente1.addDomicilio(domicilio1);
 
 			Domicilio domicilio2 = new Domicilio();
-
 			domicilio2.setCalle("Calle 321");
 			domicilio2.setNumero("321");
 			domicilio2.setLocalidad("Cruz Godoy");
@@ -63,9 +59,7 @@ public class DemoApplication {
 
 			//Pedido
 			Pedido pedido1 = new Pedido();
-
 			LocalDate fechaEjemplo = LocalDate.of(2023, 9, 12);
-
 			pedido1.setEstado("Iniciado");
 			pedido1.setFecha(LocalDate.of(2023, 9, 12));
 			pedido1.setTipoEnvio("Delivery");
@@ -75,7 +69,6 @@ public class DemoApplication {
 
 			//Factura
 			Factura factura1 = new Factura();
-
 			factura1.setNumero(1);
 			factura1.setFecha(LocalDate.of(2023, 9, 12));
 			factura1.setFormaDePago("MP");
@@ -86,14 +79,12 @@ public class DemoApplication {
 
 			//DetallePedido
 			DetallePedido detallePedido = new DetallePedido();
-
 			detallePedido.setCantidad(5);
 			detallePedido.setSubtotal(50.0);
 
 			pedido1.addDetallePedido(detallePedido);
 
 			DetallePedido detallePedido1 = new DetallePedido();
-
 			detallePedido1.setCantidad(5);
 			detallePedido1.setSubtotal(25.0);
 
@@ -128,7 +119,5 @@ public class DemoApplication {
 			pedidoRepository.save(pedido1);
 			clienteRepository.save(cliente1);
 		};
-
 	}
-
 }
